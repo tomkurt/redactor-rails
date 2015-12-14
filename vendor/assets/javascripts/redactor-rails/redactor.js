@@ -2339,7 +2339,6 @@
 					this.clean.clearUnverifiedRemove(this.$editor);
 
 					var headers = this.$editor.find('h1, h2, h3, h4, h5, h6');
-					headers.find('span').removeAttr('style');
 					headers.find(this.opts.verifiedTags.join(', ')).removeAttr('style');
 
 					this.code.sync();
@@ -2347,7 +2346,6 @@
 				clearUnverifiedRemove: function($editor)
 				{
 					$editor.find(this.opts.verifiedTags.join(', ')).removeAttr('style');
-					$editor.find('span').not('[data-verified="redactor"]').removeAttr('style');
 
 					$editor.find('span[data-verified="redactor"], img[data-verified="redactor"]').each(function(i, s)
 					{
