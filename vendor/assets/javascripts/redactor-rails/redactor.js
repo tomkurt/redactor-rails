@@ -7670,6 +7670,7 @@
 				isEmpty: function(html, removeEmptyTags)
 				{
 					html = html.replace(/[\u200B-\u200D\uFEFF]/g, '');
+					html = html.replace(/&nbsp;/gi, '');
 					html = html.replace(/<\/?br\s?\/?>/g, '');
 					html = html.replace(/\s/g, '');
 					html = html.replace(/^<p>[^\W\w\D\d]*?<\/p>$/i, '');
