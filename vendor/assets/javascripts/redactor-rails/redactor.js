@@ -4794,7 +4794,9 @@
 						}
 
 						// remove empty paragraphs
-						this.$editor.find('p').each($.proxy(this.utils.removeEmpty, this));
+						if (this.tidy.settings.removeEmpty){
+							this.$editor.find('p').each($.proxy(this.utils.removeEmpty, this));
+						}
 
 						// remove invisible space
 						if (this.keyup.current && this.keyup.current.tagName == 'DIV' && this.utils.isEmpty(this.keyup.current.innerHTML))
