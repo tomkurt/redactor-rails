@@ -4454,15 +4454,15 @@
 				{
 					if (this.keydown.ctrl && key === 90 && !e.shiftKey && !e.altKey && this.opts.buffer.length) // z key
 					{
-						e.preventDefault();
-						this.buffer.undo();
+						//e.preventDefault();
+						//this.buffer.undo();
 						return;
 					}
 					// undo
 					else if (this.keydown.ctrl && key === 90 && e.shiftKey && !e.altKey && this.opts.rebuffer.length !== 0)
 					{
-						e.preventDefault();
-						this.buffer.redo();
+						//e.preventDefault();
+						//this.buffer.redo();
 						return;
 					}
 					else if (!this.keydown.ctrl)
