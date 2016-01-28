@@ -2602,6 +2602,7 @@
 
 					this.observe.load();
 					this.opts.visual = true;
+					this.core.setCallback('showVisual', html);
 				},
 				textareaIndenting: function(e)
 				{
