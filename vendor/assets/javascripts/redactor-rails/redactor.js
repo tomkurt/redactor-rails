@@ -1868,10 +1868,6 @@
 						html = html.replace(new RegExp(i, 'g'), s);
 					});
 
-					// remove br in the of li
-					html = html.replace(new RegExp('<br\\s?/?></li>', 'gi'), '</li>');
-					html = html.replace(new RegExp('</li><br\\s?/?>', 'gi'), '</li>');
-
 					// remove verified
 					html = html.replace(new RegExp('<div(.*?) data-tagblock="redactor"(.*?[^>])>', 'gi'), '<div$1$2>');
 					html = html.replace(new RegExp('<(.*?) data-verified="redactor"(.*?[^>])>', 'gi'), '<$1$2>');
